@@ -9,8 +9,8 @@ class TestChallenge1(unittest.TestCase):
     def test_addtax_shouldCalculate1(self):
         self.assertEqual(Add_Tax(10, 0.5), 15)
 
-    #def test_addtax_shouldCalculate2(self):
-        #self.assertEqual(Add_Tax((sys.maxsize - 1) / 2, 1), sys.maxsize - 1)
+    def test_addtax_shouldCalculate2(self):
+        self.assertEqual(Add_Tax((sys.maxsize - 1) // 2, 1), sys.maxsize - 1)
 
     def test_addtax_shouldCalculate3(self):
         self.assertEqual(Add_Tax(1, 0), 1)
