@@ -17,12 +17,8 @@ class SalesItem:
 
 
 def CalculateBestBranch(sales):
-
     #print(sales)
-
     branchSales = {}
-    highestSellerBranch = ""
-    highestRevenue = 0
 
     # Implement your code here
     for i in range(len(sales)):
@@ -35,14 +31,5 @@ def CalculateBestBranch(sales):
             
         branchSales[branch] += totalSales
 
-    # order your dictionary by value
     #print(branchSales)
-    for branch, totalSale in branchSales.items():
-        #print(branch, totalSale)
-        if highestRevenue < totalSale:
-            highestRevenue = totalSale
-            highestSellerBranch = branch
-    
-    # get key of first item
-
-    return highestSellerBranch
+    return max(zip(branchSales.values(), branchSales.keys()))[1]
